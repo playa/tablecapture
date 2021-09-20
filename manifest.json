@@ -1,0 +1,13 @@
+{
+  "name": "Tabler",
+  "version": "1.0",
+  "description": "Table capture",
+  "manifest_version": 2,
+  "content_scripts": [{
+    "matches": ["*://*.izbirkom.ru/*"],
+    "js": ["html2canvas.js", "content.js"],
+    "all_frames": true,
+    "match_about_blank": true
+  }]
+  
+}
