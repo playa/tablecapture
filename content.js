@@ -15,7 +15,10 @@ function SnapShotDOM(target){
     }
 
     var sheet = document.createElement('style')
-    sheet.innerHTML = tableSelector + " td," + tableSelector + " th {border: 2px solid black;}";
+    sheet.innerHTML = tableSelector + " td {border: 2px solid black; background: white !important; } " + 
+        tableSelector + " th {border: 2px solid black; background: white !important; } " +
+        tableSelector + " td:nth-child(2) ~ * {color: white !important; text-align: center !important } " +
+        tableSelector + " td > nobr { color: black !important; } ";
     
     sheet.onload = function(){
         target.style.overflow = "visible !important";
